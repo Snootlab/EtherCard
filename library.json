@@ -25,7 +25,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/Snootlab/Gate-0.5.git"
+    "url": "https://github.com/Snootlab/ethercard.git"
   },
   "frameworks": "arduino",
   "platforms": "atmelavr"

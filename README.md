@@ -18,7 +18,7 @@ The documentation for this library is at http://jeelabs.net/pub/docs/ethercard/.
 
 
 
-1. Download the ZIP file from https://github.com/Snootlab/Gate-0.5/archive/master.zip
+1. Download the ZIP file from https://github.com/Snootlab/ethercard/archive/master.zip
 
 2. From the Arduino IDE: Sketch -> Include Library... -> Add .ZIP Library...
 

@@ -6,7 +6,7 @@
 #define REQUEST_RATE 5000 // milliseconds
 
 // ethernet interface mac address
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 // remote website name
 const char website[] PROGMEM = "google.com";
 
@@ -14,7 +14,7 @@ byte Ethernet::buffer[700];
 static long timer;
 
 // called when the client request is complete
-static void my_result_cb (byte status, word off, word len) {
+void my_result_cb (byte status, word off, word len) {
   Serial.print("<<< reply ");
   Serial.print(millis() - timer);
   Serial.println(" ms");
@@ -22,7 +22,7 @@ static void my_result_cb (byte status, word off, word len) {
 }
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println("\n[getDHCPandDNS]");
   
   if (ether.begin(sizeof Ethernet::buffer, mymac) == 0) 

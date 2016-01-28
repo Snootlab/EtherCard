@@ -1,10 +1,10 @@
 #include <EtherCard.h>
 
-static byte mymac[] = { 0x1A,0x2B,0x3C,0x4D,0x5E,0x6F };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 byte Ethernet::buffer[700];
 static uint32_t timer;
 
-char website[] PROGMEM = "server.example.net";
+const char website[] PROGMEM = "server.example.net";
 const int dstPort PROGMEM = 1234;
 
 const int srcPort PROGMEM = 4321;

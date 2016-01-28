@@ -4,18 +4,18 @@
 #include <EtherCard.h>
 
 // ethernet interface mac address, must be unique on the LAN
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 byte Ethernet::buffer[700];
 static uint32_t timer;
 
 // called when a ping comes in (replies to it are automatic)
-static void gotPinged (byte* ptr) {
+void gotPinged (byte* ptr) {
   ether.printIp(">>> ping from: ", ptr);
 }
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println("\n[pings]");
   
   if (ether.begin(sizeof Ethernet::buffer, mymac) == 0)

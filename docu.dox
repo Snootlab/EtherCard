@@ -11,7 +11,7 @@ License: <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2</a><br/><br/>
 <tr><td>SCK</td><td>Pin 13</td></tr>
 <tr><td>SO</td><td>Pin 12</td></tr>
 <tr><td>SI</td><td>Pin 11</td></tr>
-<tr><td>CS</td><td>Pin  8</td></tr>
+<tr><td>CS</td><td>Pin 10</td></tr>
 </table>
 
 @section intro_sec Introduction
@@ -23,9 +23,9 @@ Adapted and extended from code written by Guido Socher and Pascal Stang.
 
 The documentation for this library is at http://jeelabs.net/pub/docs/ethercard/
 
-The code is available on GitHub, at https://github.com/jcw/ethercard - to install:
+The code is available on GitHub, at https://github.com/Snootlab/Gate-0.5 - to install : 
 
-Download the ZIP file from https://github.com/jcw/ethercard/archive/master.zip
+Download the ZIP file from https://github.com/Snootlab/Gate-0.5/archive/master.zip
 From the Arduino IDE: Sketch -> Import Library... -> Add Library...
 Restart the Arduino IDE to see the new "EtherCard" library with examples
 See the comments in the example sketches for details about how to try them out.
@@ -39,7 +39,7 @@ Several @link examples example scripts @endlink are provided with the library wh
 @subsection Initiate To initiate the library call EtherCard::begin
 <pre>
 uint8_t Ethernet::buffer[700]; // configure buffer size to 700 octets
-static uint8_t mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 }; // define (unique on LAN) hardware (MAC) address
+static uint8_t mymac[] = { 0x4C,0x61,0x65,0x74,0x75,0x65 }; // define (unique on LAN) hardware (MAC) address
 
 uint8_type nFirmwareVersion ether.begin(sizeof Ethernet::buffer, mymac);
 if(0 == nFirmwareVersion)

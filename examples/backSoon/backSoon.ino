@@ -13,7 +13,7 @@ static byte gwip[] = { 192,168,1,1 };
 #endif
 
 // ethernet mac address - must be unique on your network
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 byte Ethernet::buffer[500]; // tcp/ip send and receive buffer
 
@@ -37,7 +37,7 @@ const char page[] PROGMEM =
 ;
 
 void setup(){
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println("\n[backSoon]");
   
   if (ether.begin(sizeof Ethernet::buffer, mymac) == 0) 

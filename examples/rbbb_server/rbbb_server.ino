@@ -4,7 +4,7 @@
 #include <EtherCard.h>
 
 // ethernet interface mac address, must be unique on the LAN
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 static byte myip[] = { 192,168,1,203 };
 
 byte Ethernet::buffer[500];
@@ -16,7 +16,7 @@ void setup () {
   ether.staticSetup(myip);
 }
 
-static word homePage() {
+word homePage() {
   long t = millis() / 1000;
   word h = t / 3600;
   byte m = (t / 60) % 60;

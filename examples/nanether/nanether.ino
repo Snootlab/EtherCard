@@ -15,12 +15,12 @@ byte fixed;                                 // Address fixed, no DHCP
 
 void setup(void)
 {
-    Serial.begin(57600);
+    Serial.begin(9600);
     delay(2000);
 
     /* Check that the Ethernet controller exists */
     Serial.println("Initialising the Ethernet controller");
-    if (ether.begin(sizeof Ethernet::buffer, mac, 8) == 0) {
+    if (ether.begin(sizeof Ethernet::buffer, mac, 10) == 0) {
         Serial.println( "Ethernet controller NOT initialised");
         while (true)
             /* MT */ ;

@@ -1,4 +1,4 @@
-// Simple demo for feeding some random data to Pachube.
+// Simple demo for feeding some random data to Xively.
 // 2011-07-08 <jc@wippler.nl> http://opensource.org/licenses/mit-license.php
 
 // Handle returning code and reset ethernet module if needed
@@ -11,7 +11,7 @@
 #define APIKEY "xxx"
 
 // ethernet interface mac address, must be unique on the LAN
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 const char website[] PROGMEM = "api.xively.com";
 
@@ -26,7 +26,7 @@ int res = 0;
 
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println("\n[Xively example]");
 
   //Initialize Ethernet

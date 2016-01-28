@@ -4,7 +4,7 @@
 #include <EtherCard.h>
 
 // ethernet interface mac address, must be unique on the LAN
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 byte Ethernet::buffer[700];
 static uint32_t timer;
@@ -12,7 +12,7 @@ static uint32_t timer;
 const char website[] PROGMEM = "www.google.com";
 
 // called when the client request is complete
-static void my_callback (byte status, word off, word len) {
+void my_callback (byte status, word off, word len) {
   Serial.println(">>>");
   Ethernet::buffer[off+300] = 0;
   Serial.print((const char*) Ethernet::buffer + off);
@@ -20,7 +20,7 @@ static void my_callback (byte status, word off, word len) {
 }
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println(F("\n[webClient]"));
 
   if (ether.begin(sizeof Ethernet::buffer, mymac) == 0) 

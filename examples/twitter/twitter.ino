@@ -16,7 +16,7 @@
 #define TOKEN   "Insert-your-token-here"
 
 // ethernet interface mac address, must be unique on the LAN
-byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 const char website[] PROGMEM = "arduino-tweet.appspot.com";
 
@@ -25,7 +25,7 @@ static byte session;
 byte Ethernet::buffer[700];
 Stash stash;
 
-static void sendToTwitter () {
+void sendToTwitter () {
   Serial.println("Sending tweet...");
   byte sd = stash.create();
 
@@ -52,7 +52,7 @@ static void sendToTwitter () {
 }
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
   Serial.println("\n[Twitter Client]");
 
   if (ether.begin(sizeof Ethernet::buffer, mymac) == 0) 

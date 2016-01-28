@@ -15,7 +15,7 @@
     },   
     {
       "name": "Guido Socher"
-    }    
+    }
   ],
   "include": [
     "examples",
@@ -25,7 +25,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/jcw/ethercard.git"
+    "url": "https://github.com/Snootlab/Gate-0.5.git"
   },
   "frameworks": "arduino",
   "platforms": "atmelavr"

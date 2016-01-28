@@ -4,7 +4,7 @@
 #include <EtherCard.h>
 
 // ethernet interface mac address, must be unique on the LAN
-static byte mymac[] = { 0x74,0x69,0x69,0x2D,0x30,0x31 };
+static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 // the buffersize must be relatively large for DHCP to work; when
 // using static setup a buffer size of 100 is sufficient;
@@ -15,7 +15,7 @@ const char website[] PROGMEM = "textfiles.com";
 
 uint32_t nextSeq;
 // called when the client request is complete
-static void my_callback (byte status, word off, word len) {
+void my_callback (byte status, word off, word len) {
    
     if (strncmp_P((char*) Ethernet::buffer+off,PSTR("HTTP"),4) == 0) {
         Serial.println(">>>");
@@ -41,7 +41,7 @@ static void my_callback (byte status, word off, word len) {
 }
 
 void setup () {
-    Serial.begin(57600);
+    Serial.begin(9600);
     Serial.println(F("\n[Persistence+readPacketSlice]"));
 
   

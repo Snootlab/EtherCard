@@ -3,7 +3,8 @@
 //      Copyright (c) 2008 Xing Yu.  All right reserved. (this is LGPL v2.1)
 // It is however derived from the enc28j60 and ip code (which is GPL v2)
 //      Author: Pascal Stang
-//      Modified by: Guido Socher
+//      Modified by: Guido Socher 
+//		Adapted for Snootlab Gate Shield by:Laetitia Hardy-Dessources
 //      DHCP code: Andrew Lindsay
 // Hence: GPL V2
 //
@@ -16,7 +17,7 @@
 //   SCK - Pin 13
 //   SO  - Pin 12
 //   SI  - Pin 11
-//   CS  - Pin  8
+//   CS  - Pin 10
 //
 /** @file */ 
 
@@ -27,7 +28,7 @@
 #endif
 
 #if ARDUINO >= 100
-#include <Arduino.h> // Arduino 1.0
+#include <Arduino.h> // Arduino 1.0 & up
 #define WRITE_RESULT size_t
 #define WRITE_RETURN return 1;
 #else
@@ -107,15 +108,19 @@ typedef struct {
 } StashHeader;
 
 /** This class provides access to the memory within the ENC28J60 network interface. */
-class Stash : public /*Stream*/ Print, private StashHeader {
+class Stash : public /*Stream*/ Print, private StashHeader 
+{
     uint8_t curr;      //!< Current page
     uint8_t offs;      //!< Current offset in page
 
-    typedef struct {
-        union {
+    typedef struct 
+	{
+        union 
+		{
             uint8_t bytes[64];
             uint16_t words[32];
-            struct {
+            struct 
+			{
                 StashHeader head; // StashHeader is only stored in first block 
                 uint8_t filler[59];
                 uint8_t tail;     // only meaningful if bnum==last; number of bytes in last block 
@@ -293,7 +298,7 @@ public:
     *     @return <i>uint8_t</i> Firmware version or zero on failure.
     */
     static uint8_t begin (const uint16_t size, const uint8_t* macaddr,
-                          uint8_t csPin =8);
+                          uint8_t csPin = 10);
 
     /**   @brief  Configure network interface with static IP
     *     @param  my_ip IP address (4 bytes). 0 for no change.

@@ -1,6 +1,7 @@
 // Microchip ENC28J60 Ethernet Interface Driver
 // Author: Pascal Stang
 // Modified by: Guido Socher
+// Adapted for Snootlab Gate Shield by: Laetitia Hardy-Dessources
 // Copyright: GPL V2
 //
 // This driver provides initialization and transmit/receive
@@ -57,7 +58,7 @@ public:
     *     @return <i>uint8_t</i> ENC28J60 firmware version or zero on failure.
     */
     static uint8_t initialize (const uint16_t size, const uint8_t* macaddr,
-                               uint8_t csPin = 8);
+                               uint8_t csPin = 10);
 
     /**   @brief  Check if network link is connected
     *     @return <i>bool</i> True if link is up
@@ -144,7 +145,7 @@ public:
     *     @param  csPin Arduino pin used for chip select (enable SPI bus)
     *     @return <i>uint8_t</i> 0 on failure
     */
-    static uint8_t doBIST(uint8_t csPin = 8);
+    static uint8_t doBIST(uint8_t csPin = 10);
 
     /**   @brief  Copies a slice from the current packet to RAM
     *     @param  dest pointer in RAM where the data is copied to

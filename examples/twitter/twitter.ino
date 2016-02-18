@@ -15,7 +15,7 @@
 // OAUTH key from http://arduino-tweet.appspot.com/
 #define TOKEN   "Insert-your-token-here"
 
-// ethernet interface mac address, must be unique on the LAN
+// Ethernet interface MAC address, must be unique on the LAN
 byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 const char website[] PROGMEM = "arduino-tweet.appspot.com";

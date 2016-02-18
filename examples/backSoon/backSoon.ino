@@ -12,10 +12,10 @@ static byte myip[] = { 192,168,1,200 };
 static byte gwip[] = { 192,168,1,1 };
 #endif
 
-// ethernet mac address - must be unique on your network
+// Ethernet MAC address - must be unique on your network
 static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
-byte Ethernet::buffer[500]; // tcp/ip send and receive buffer
+byte Ethernet::buffer[500]; // TCP/IP send and receive buffer
 
 const char page[] PROGMEM =
 "HTTP/1.0 503 Service Unavailable\r\n"

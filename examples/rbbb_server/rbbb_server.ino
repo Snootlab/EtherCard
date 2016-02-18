@@ -3,7 +3,7 @@
 
 #include <EtherCard.h>
 
-// ethernet interface mac address, must be unique on the LAN
+// Ethernet interface MAC address, must be unique on the LAN
 static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 static byte myip[] = { 192,168,1,203 };
 
@@ -38,6 +38,6 @@ void loop () {
   word len = ether.packetReceive();
   word pos = ether.packetLoop(len);
   
-  if (pos)  // check if valid tcp data is received
+  if (pos)  // check if valid TCP data is received
     ether.httpServerReply(homePage()); // send web page data
 }

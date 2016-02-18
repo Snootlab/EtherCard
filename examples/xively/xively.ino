@@ -10,7 +10,7 @@
 #define FEED "000"
 #define APIKEY "xxx"
 
-// ethernet interface mac address, must be unique on the LAN
+// Ethernet interface MAC address, must be unique on the LAN
 static byte mymac[] = { 0x4C, 0x61, 0x65, 0x74, 0x75, 0x65 };
 
 const char website[] PROGMEM = "api.xively.com";
@@ -20,7 +20,7 @@ uint32_t timer;
 Stash stash;
 byte session;
 
-//timing variable
+// timing variable
 int res = 0;
 
 
@@ -29,14 +29,14 @@ void setup () {
   Serial.begin(9600);
   Serial.println("\n[Xively example]");
 
-  //Initialize Ethernet
+  // Initialize Ethernet
   initialize_ethernet();
 }
 
 
 void loop () { 
   
-  //if correct answer is not received then re-initialize ethernet module
+  //if correct answer is not received then re-initialize Ethernet module
   if (res > 220){
     initialize_ethernet(); 
   }
@@ -73,7 +73,7 @@ void loop () {
     stash.println(msje);
     stash.save();
 
-    //Display data to be sent
+    // Display data to be sent
     Serial.println(demo);
     Serial.println(one);
 
@@ -105,7 +105,7 @@ void loop () {
 
 void initialize_ethernet(void){  
   for(;;){ // keep trying until you succeed 
-    //Reinitialize ethernet module
+    // Reinitialize Ethernet module
     pinMode(5, OUTPUT);
     Serial.println("Reseting Ethernet...");
     digitalWrite(5, LOW);
@@ -132,7 +132,7 @@ void initialize_ethernet(void){
 
     ether.printIp("SRV: ", ether.hisip);
 
-    //reset init value
+    // reset init value
     res = 0;
     break;
   }

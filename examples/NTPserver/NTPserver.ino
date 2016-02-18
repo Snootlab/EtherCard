@@ -20,7 +20,7 @@ static int currentTimeserver = 0;
 
 // Find list of servers at http://support.ntp.org/bin/view/Servers/StratumTwoTimeServers
 // Please observe server restrictions with regard to access to these servers.
-// This number should match how many ntp time server strings we have
+// This number should match how many NTP time server strings we have
 #define NUM_TIMESERVERS 4
 
 // Create an entry for each timeserver to use
@@ -39,7 +39,7 @@ byte clientPort = 123;
 
 // The next part is to deal with converting time received from NTP servers
 // to a value that can be displayed. This code was taken from somewhere that
-// I cant remember. Apologies for no acknowledgement.
+// I can't remember. Apologies for no acknowledgement.
 
 unsigned long lastUpdate = 0;
 unsigned long timeLong;
@@ -71,7 +71,7 @@ byte monthlen(byte isleapyear,byte month)
 }
 
 
-// gmtime -- convert calendar time (sec since 1970) into broken down time
+// gmtime -- converts calendar time (sec since 1970) into broken down time
 // returns something like Fri 2007-10-19 in day and 01:02:21 in clock
 // The return values is the minutes as integer. This way you can update
 // the entire display when the minutes have changed and otherwise just
